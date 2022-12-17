@@ -27,8 +27,8 @@ list_of_files = [
     "requirements.txt",
     "requirements_dev.txt",
     "setup.py",
-    "setup.cfg",
-    "pyproject.toml",
+    "setup.cfg",                                   #pypi setup configuration
+    "pyproject.toml",                              #pypi setup
     "tox.ini",
     "research/trials.ipynb"
 ]                           

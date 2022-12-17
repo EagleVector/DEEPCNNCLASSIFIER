@@ -1,3 +1,4 @@
+#All the mentioned params will be shown in pypi homepage.
 import setuptools
 
 with open("README.md", "r", encoding="utf-8") as f:
