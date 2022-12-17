@@ -10,7 +10,7 @@ package_name = "DeepClassifier"
 #creating all the necessary files for project in one go
 list_of_files = [
     ".github/workflows/.gitkeep",
-    f"src/{package_name}/__init__.py"
+    f"src/{package_name}/__init__.py",
     f"src/{package_name}/components/__init__.py",
     f"src/{package_name}/utils/__init__.py",
     f"src/{package_name}/entity/__init__.py",
