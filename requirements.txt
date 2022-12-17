@@ -1,6 +1,5 @@
 ##User requirements
 notebook
-tensorflow
 matplotlib
 seaborn
 pandas
