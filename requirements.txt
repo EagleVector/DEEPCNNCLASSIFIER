@@ -1,0 +1,10 @@
+##User requirements
+
+notebook
+tensorflow
+matplotlib
+seaborn
+pandas
+numpy
+dvc
+-e .
