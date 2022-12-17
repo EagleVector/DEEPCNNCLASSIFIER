@@ -17,6 +17,9 @@ list_of_files = [
     f"src/{package_name}/pipeline/__init__.py",
     f"src/{package_name}/constants/__init__.py",
     f"src/{package_name}/config/__init__.py",
+    "tests/__init__.py",
+    "tests/unit/__init__.py",                      #testing class and functions
+    "tests/integration/__init__.py",               #testing components in pipeline
     "configs/config.yaml",
     "dvc.yaml",
     "params.yaml",
