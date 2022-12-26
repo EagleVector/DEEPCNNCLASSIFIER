@@ -45,7 +45,7 @@ class DataIngestion:
             os.remove(target_filepath)
 
     def unzip_and_clean(self):
-        logger.info(f"Unzipping file and removing unwanted files")
+        logger.info("Unzipping file and removing unwanted files")
         with ZipFile(file=self.config.local_data_file, mode="r") as zf:
             list_of_files = zf.namelist()
             updated_list_of_files = self._get_updated_list_of_files(list_of_files)
