@@ -1,7 +1,8 @@
 from DeepClassifier.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from DeepClassifier.utils import read_yaml, create_directories
-from DeepClassifier.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig
+from DeepClassifier.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig, PrepareCallbacksConfig
 from pathlib import Path
+import os
 
 
 class ConfigurationManager:
@@ -44,3 +45,19 @@ class ConfigurationManager:
         )
 
         return prepare_base_model_config
+
+    def prepare_callbacks_config(self) -> PrepareCallbacksConfig:
+        config = self.config.Prepare_callbacks
+        model_ckpt_dir = os.path.dirname(config.checkpoint_model_filepath)
+        create_directories([
+            Path(model_ckpt_dir),
+            Path(config.tensorboard_root_log_dir)
+        ])
+
+        prepare_callbacks_config = PrepareCallbacksConfig(
+            root_dir=Path(config.root_dir),
+            tensorboard_root_log_dir=Path(config.tensorboard_root_log_dir),
+            checkpoint_model_filepath=Path(config.checkpoint_model_filepath)
+        )
+
+        return prepare_callbacks_config

@@ -1,6 +1,7 @@
 import os
 import urllib.request as request
 from DeepClassifier.entity import PrepareBaseModelConfig
+from DeepClassifier import logger
 import tensorflow as tf
 from pathlib import Path
 
