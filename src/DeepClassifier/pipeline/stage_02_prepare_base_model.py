@@ -15,10 +15,8 @@ def main():
 
 if __name__ == "__main__":
     try:
-        logger.info(f"********************************")
-        logger.info(
-            f"<<<< Stage {STAGE_NAME} started <<<<<\n\nx============x"
-        )
+        logger.info("********************************")
+        logger.info(f"<<<< Stage {STAGE_NAME} started <<<<<\n\nx============x")
 
         main()
         logger.info(
