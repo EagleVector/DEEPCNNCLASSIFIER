@@ -128,6 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# MLflow artifacts
+research/mlflow_dir/mlruns
+
 
 # vscode
 .vscode/
