@@ -13,3 +13,8 @@
 9. Run tox for testing your package.
 10. Update the dvc.yaml
 11. Run "dvc repro" for running all the stages in pipeline
+
+MLFLOW_TRACKING_URI=https://dagshub.com/EagleVector/DEEPCNNCLASSIFIER.mlflow \
+MLFLOW_TRACKING_USERNAME=EagleVector \
+MLFLOW_TRACKING_PASSWORD=080bc582098c67dc74d7c0aec3f65287566bedce \
+python script.py
