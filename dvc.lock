@@ -21,8 +21,8 @@ stages:
       md5: ec5529e17201ee6a2b93c7691e0abf7f
       size: 805
     - path: src/DeepClassifier/pipeline/stage_02_prepare_base_model.py
-      md5: 32324eddfcb4d52e157ac7482814ca8a
-      size: 860
+      md5: 5856a1fba921ebd12cbe738e6421b700
+      size: 837
     params:
       params.yaml:
         CLASSES: 2
@@ -35,7 +35,7 @@ stages:
         WEIGHTS: imagenet
     outs:
     - path: artifacts/prepare_base_model
-      md5: c7fba38221613f36dcd10fc3369dc7e5.dir
+      md5: 37f305182ee4db7fecd23f0db261b6ba.dir
       size: 118054512
       nfiles: 2
   training:
@@ -46,18 +46,18 @@ stages:
       size: 848866410
       nfiles: 24998
     - path: artifacts/prepare_base_model
-      md5: c7fba38221613f36dcd10fc3369dc7e5.dir
+      md5: 37f305182ee4db7fecd23f0db261b6ba.dir
       size: 118054512
       nfiles: 2
     - path: configs/config.yaml
       md5: ec5529e17201ee6a2b93c7691e0abf7f
       size: 805
     - path: src/DeepClassifier/components/prepare_callbacks.py
-      md5: ea9293bcca9853fef258fd36a77bae63
-      size: 917
+      md5: 34f56dddf9fd1ea47998111687464334
+      size: 839
     - path: src/DeepClassifier/pipeline/stage_03_training.py
-      md5: 063e6c36fce73ed2b8c5c289cc7091a2
-      size: 1050
+      md5: a0dce958979580734616f0ef1c7b9ea9
+      size: 1010
     params:
       params.yaml:
         AUGMENTATION: true
@@ -69,10 +69,8 @@ stages:
         - 3
     outs:
     - path: artifacts/training/model.h5
-      md5: 329d07b57cadc0e5be7469bb17634e5c
+      md5: 9a9ce601dabb2a1753faf053722d4a6b
       size: 59337488
-
-
   evaluation:
     cmd: python src/DeepClassifier/pipeline/stage_04_evaluation.py
     deps:
@@ -81,15 +79,15 @@ stages:
       size: 848866410
       nfiles: 24998
     - path: artifacts/prepare_base_model
-      md5: c7fba38221613f36dcd10fc3369dc7e5.dir
+      md5: 37f305182ee4db7fecd23f0db261b6ba.dir
       size: 118054512
       nfiles: 2
     - path: configs/config.yaml
       md5: ec5529e17201ee6a2b93c7691e0abf7f
       size: 805
     - path: src/DeepClassifier/pipeline/stage_04_evaluation.py
-      md5: a4c8d0ae5d145df711f9287793036695
-      size: 745
+      md5: 6aa0f70ff732063bccdb142b7e394dbb
+      size: 723
     params:
       params.yaml:
         BATCH_SIZE: 16
